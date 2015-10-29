@@ -17,6 +17,10 @@
          id="content">
 
         <div class="twelve wide column grid" style="margin-top: 0.5rem;">
+            <div class="ui breadcrumb" style="font-size: 13px;">
+                <div class="active section">Dashboard</div>
+            </div>
+
             <h2 class="ui header">
                 <div class="content"><i class="dashboard icon"></i> Dashboard</div>
                 <div class="ui divider"></div>
