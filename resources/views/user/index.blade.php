@@ -36,13 +36,13 @@
 
         <div class="twelve wide column grid" style="margin-top: 0.5rem;">
             <div class="ui breadcrumb" style="font-size: 13px;">
-                <a class="section">Home</a>
+                <a class="section" href="{{ url('/') }}">Dashboard</a>
                 <i class="right angle icon divider"></i>
                 <div class="active section">Roles & User</div>
             </div>
             <h2 class="ui header">
                 <div class="content">
-                    <i class="users icon"></i> Roles & Users Management
+                    <i class="users icon"></i> Roles & Users
                 </div>
 
                 <button class="ui positive small right floated button">
