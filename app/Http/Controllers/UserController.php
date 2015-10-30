@@ -9,11 +9,9 @@ use App\Http\Controllers\Controller;
 class UserController extends Controller
 {
 
-
     function __construct() {
         $this->middleware('auth');
     }
-
 
     public function index()
     {

@@ -6,7 +6,6 @@ Route::controllers([
 ]);
 
 get('/', ['as' => '/', 'uses' => 'HomeController@index']);
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -18,6 +17,7 @@ get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 |
 */
 
+
 Route::bind('student',    function ($id) { return App\Student::whereId($id)->first(); });
 Route::resource('student', 'StudentController');
 
@@ -26,4 +26,4 @@ Route::resource('user', 'UserController');
 
 
 
-//get('user_management', ['as' => 'u_m', 'uses' => 'UserController@manageUser']);
+get('user_management', ['as' => 'u_m', 'uses' => 'UserController@manageUser']);

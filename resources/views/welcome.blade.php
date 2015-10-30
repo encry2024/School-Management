@@ -5,7 +5,6 @@
 <div class="ui menu inverted" style="border-radius: 0rem !important;">
     <div class="header item">
         Welcome to HIMC
-    </div>
     <div class="header item right">
         Current User :: Guest
     </div>

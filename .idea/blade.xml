@@ -32,4 +32,9 @@
       <data directive="@section" injection="true" prefix="&lt;?php $__env-&gt;startSection(" suffix="); ?&gt;" />
     </customDirectives>
   </component>
+<<<<<<< HEAD
 </project>
+=======
+</project>
+
+>>>>>>> c1ec1e43c149540f99fe12b24177cad31dd86846
