@@ -2,7 +2,7 @@
 
 
 @section('header')
-@include('util.header')
+    @include('util.header')
 @stop
 
 
@@ -22,6 +22,7 @@
                 <i class="right angle icon divider"></i>
                 <div class="active section">Student</div>
             </div>
+
             <h2 class="ui header">
                 <div class="content">
                     <i class="student icon"></i> Student
@@ -32,61 +33,62 @@
 
             <div class="ui grid">
                 <div class="sixteen wide column">
-                    <button class="ui negative small right floated  button">
+                    <button class="ui negative small right floated button">
                         <i class="trash icon"></i>
                         Delete
                     </button>
 
                     <br><br>
+
                     <table class="ui basic table" style="font-size: 13px;">
                         <thead>
-                        <tr>
-                            <th>User</th>
-                            <th>Role</th>
-                            <th>Notes</th>
-                            <th>
-                                <div class="ui checkbox">
-                                    <input type="checkbox">
-                                    <label></label>
-                                </div>
-                            </th>
-                        </tr>
+                            <tr>
+                                <th>User</th>
+                                <th>Role</th>
+                                <th>Notes</th>
+                                <th>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox">
+                                        <label></label>
+                                    </div>
+                                </th>
+                            </tr>
                         </thead>
 
                         <tbody>
-                        <tr>
-                            <td>John</td>
-                            <td>Admin</td>
-                            <td>None</td>
-                            <td>
-                                <div class="ui checkbox">
-                                    <input type="checkbox">
-                                    <label></label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jamie</td>
-                            <td>Accounting</td>
-                            <td>Requires call</td>
-                            <td>
-                                <div class="ui checkbox">
-                                    <input type="checkbox">
-                                    <label></label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jill</td>
-                            <td>Professor</td>
-                            <td>None</td>
-                            <td>
-                                <div class="ui checkbox">
-                                    <input type="checkbox">
-                                    <label></label>
-                                </div>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Admin</td>
+                                <td>None</td>
+                                <td>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox">
+                                        <label></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jamie</td>
+                                <td>Accounting</td>
+                                <td>Requires call</td>
+                                <td>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox">
+                                        <label></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Jill</td>
+                                <td>Professor</td>
+                                <td>None</td>
+                                <td>
+                                    <div class="ui checkbox">
+                                        <input type="checkbox">
+                                        <label></label>
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -100,7 +102,6 @@
 
     <div class="two wide column">
         <div class="ui vertical fluid right tabular menu" style="height: 100%;">
-
             <a style="font-size: 13px;" class="item" href="{{ route('/') }}">
                 Dashboard <i class="dashboard icon"></i>
             </a>
@@ -152,7 +153,6 @@
             <a style="font-size: 13px;" class="item">
                 Technical Support
             </a>
-
         </div>
     </div>
 </div>
