@@ -20,26 +20,40 @@
             <div class="ui breadcrumb" style="font-size: 13px;">
                 <a class="section" href="{{ url('/') }}">Dashboard</a>
                 <i class="right angle icon divider"></i>
-                <div class="active section">Student</div>
+                <div class="active section">Students</div>
             </div>
 
             <h2 class="ui header">
                 <div class="content">
-                    <i class="student icon"></i> Student
-                </div>
+                    <i class="student icon"></i> Students
 
+                </div>
+                <button class="ui negative small right floated button">
+                    <i class="trash icon"></i>
+                    Delete
+                </button>
                 <div class="ui divider"></div>
             </h2>
 
             <div class="ui grid">
+
                 <div class="sixteen wide column">
-                    <button class="ui negative small right floated button">
-                        <i class="trash icon"></i>
-                        Delete
-                    </button>
-
-                    <br><br>
-
+                    <div class="ui labeled button" tabindex="0">
+                        <div class="ui red button">
+                            Registered Students
+                        </div>
+                        <a class="ui basic red left pointing label">
+                            0
+                        </a>
+                    </div>
+                    <div class="ui labeled button" tabindex="0">
+                        <div class="ui red button">
+                            Pending Students
+                        </div>
+                        <a class="ui basic left pointing red label">
+                            0
+                        </a>
+                    </div>
                     <table class="ui basic table" style="font-size: 13px;">
                         <thead>
                             <tr>
@@ -160,4 +174,7 @@
 
 
 @section('script')
+<script>
+    $(".ui.dropdown").dropdown();
+</script>
 @stop

@@ -50,6 +50,7 @@
                             <div class="or"></div>
                             <button class="ui positive button">Register</button>
                         </div>
+
                         <br><br>
                     </div>
                 </form>
