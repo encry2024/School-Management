@@ -17,14 +17,15 @@ get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 |
 */
 
-
+// Student Route
 Route::bind('student',    function ($id) { return App\Student::whereId($id)->first(); });
 Route::resource('student', 'StudentController');
 get('student_registration', ['as' => 'stud_reg', 'uses' => 'StudentController@regForm']);
 
+// User Route
 Route::bind('user', function ($id) { return App\User::whereId($id)->first(); });
 Route::resource('user', 'UserController');
 
-
-
-get('user_management', ['as' => 'u_m', 'uses' => 'UserController@manageUser']);
+// Subject Route
+Route::bind('subject', function ($id) {return App\Subject::whereId($id)->first(); });
+Route::resource('subject', 'SubjectController');
