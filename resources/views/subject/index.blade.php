@@ -17,7 +17,7 @@
 		 id="content">
 
 		<div class="twelve wide column grid" style="margin-top: 0.5rem;">
-			<div class="ui breadcrumb" style="font-size: 13px;">
+			<div class="ui breadcrumb left floated" style="font-size: 13px;">
 				<a class="section" href="{{ url('/') }}">Dashboard</a>
 				<i class="right angle icon divider"></i>
 				<div class="active section">Roles & User</div>
