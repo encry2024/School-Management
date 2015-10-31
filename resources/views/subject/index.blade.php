@@ -9,7 +9,7 @@
 @section('content')
 <div class="ui grid">
 	<div class="three wide column">
-		@include('util.sidebar')
+		@include('util.user_menu')
 	</div>
 
 	<div class="ten wide column"
@@ -20,11 +20,11 @@
 			<div class="ui breadcrumb left floated" style="font-size: 13px;">
 				<a class="section" href="{{ url('/') }}">Dashboard</a>
 				<i class="right angle icon divider"></i>
-				<div class="active section">Roles & User</div>
+				<div class="active section">Subjects</div>
 			</div>
 			<h2 class="ui header">
 				<div class="content">
-					<i class="users icon"></i> Roles & Users
+					<i class="book icon"></i> Subjects
 				</div>
 
 				<button class="ui positive small right floated test button">
