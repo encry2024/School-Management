@@ -20,6 +20,7 @@ get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 
 Route::bind('student',    function ($id) { return App\Student::whereId($id)->first(); });
 Route::resource('student', 'StudentController');
+get('student_registration', ['as' => 'stud_reg', 'uses' => 'StudentController@regForm']);
 
 Route::bind('user', function ($id) { return App\User::whereId($id)->first(); });
 Route::resource('user', 'UserController');
