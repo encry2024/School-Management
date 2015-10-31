@@ -29,7 +29,12 @@
 
 				<button class="ui positive small right floated test button">
 					<i class="icon user"></i>
-					Create Role
+					Create Subject
+				</button>
+
+				<button class="ui negative small right floated  button">
+					<i class="trash icon"></i>
+					Delete
 				</button>
 
 				<div class="ui divider"></div>
@@ -37,12 +42,6 @@
 
 			<div class="ui grid">
 				<div class="sixteen wide column">
-					<button class="ui negative small right floated  button">
-						<i class="trash icon"></i>
-						Delete
-					</button>
-
-					<br><br>
 					<table class="ui basic table" style="font-size: 13px;">
 						<thead>
 						<tr>

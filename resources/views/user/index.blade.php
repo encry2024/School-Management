@@ -46,9 +46,14 @@
                         <i class="users icon"></i> Roles & Users
                     </div>
 
-                    <button class="ui positive small right floated test button">
+                    <button class="ui positive small right floated create_role button">
                         <i class="icon user"></i>
                         Create Role
+                    </button>
+
+                    <button class="ui negative small right floated  button">
+                        <i class="trash icon"></i>
+                        Delete
                     </button>
 
                     <div class="ui divider"></div>
@@ -56,12 +61,6 @@
 
                 <div class="ui grid">
                     <div class="sixteen wide column">
-                        <button class="ui negative small right floated  button">
-                            <i class="trash icon"></i>
-                            Delete
-                        </button>
-
-                        <br><br>
                         <table class="ui basic table" style="font-size: 13px;">
                             <thead>
                                 <tr>
@@ -182,7 +181,7 @@
     </div>
 
     {{-- Create Role --}}
-    <div class="ui test modal">
+    <div class="ui small role modal">
         <div class="header">Create Role</div>
         <div class="content">
             <p></p>
@@ -197,6 +196,6 @@
     <script type="text/javascript">
         $('.ui.dropdown').dropdown();
 
-        $('.test.modal').modal('attach events', '.test.button', 'show');
+        $('.role.modal').modal('attach events', '.create_role', 'show');
     </script>
 @stop
