@@ -91,4 +91,9 @@ class StudentController extends Controller
     {
         //
     }
+
+    public function regForm()
+    {
+        return view('student.register');
+    }
 }
