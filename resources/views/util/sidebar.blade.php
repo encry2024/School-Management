@@ -12,7 +12,7 @@
       Student <i class="student icon"></i>
       </a>
 
-      <a style="font-size: 13px;" class="item">
+      <a style="font-size: 13px;" class="item" href="{{ route('subject.index') }}">
       Subject <i class="book icon"></i>
       </a>
 
