@@ -6,14 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Student;
 
 class StudentController extends Controller
 {
-
-
-    function __construct() {
-        $this->middleware('auth');
-    }
 
     /**
      * Display a listing of the resource.
@@ -33,7 +29,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('student.register');
     }
 
     /**
@@ -44,7 +40,9 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $store_student = Student::storeStudent($request);
+
+        return $store_student;
     }
 
     /**
@@ -90,10 +88,5 @@ class StudentController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function regForm()
-    {
-        return view('student.register');
     }
 }
