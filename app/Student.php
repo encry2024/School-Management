@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+
 class Student extends Eloquent
 {
     use SoftDeletes;
@@ -17,10 +19,25 @@ class Student extends Eloquent
     public $timestamps = true;
 
 
+    public static function generateExaminerId($eId)
+    {
+        $length = 3;
+        $str = '';
+        $chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";  
+
+        $size = strlen( $chars );
+        for( $i = 0; $i < $length; $i++ ) {
+            $str .= $chars[ rand( 0, $size - 1 ) ];
+        }
+
+        return $eId.$str.(new \DateTime())->format('Ymd');
+    }
+
+
     public static function storeStudent($request)
     {
         $examiners = DB::connection('mysql2')->table('examiners')
-            ->insert([
+            ->insertGetId([
                 'fname'           =>    $request->get('fname'),
                 'mname'           =>    $request->get('mname'),
                 'lname'           =>    $request->get('lname'),
@@ -39,20 +56,17 @@ class Student extends Eloquent
                 'created_at'      =>    (new \DateTime())->format('Y-m-d H:i:s'),
                 'updated_at'      =>    (new \DateTime())->format('Y-m-d H:i:s')
             ]);
-
-        return redirect('student/exam');
         
-        /*$student = new Student();
-        $student->firstname = $request->get('fname');
-        $student->middlename = $request->get('mname');
-        $student->lastname = $request->get('lname');
-        $student->contact = $request->get('contact');
-        $student->address = $request->get('address');
-        $student->dob = $request->get('dob');
-        $student->gender = $request->get('gender');
+        // Update examiner id
+        $examiner = DB::connection('mysql2')->table('examiners')
+                    ->where('id', $examiners)
+                    ->update(['examiner_id' => static::generateExaminerId($examiners)]);
 
-        if($student->save()) {
-            return redirect('student/exam', compact('student'));
-        }*/
+        // Retrieve examiner info
+        $getExaminerId = DB::connection('mysql2')->table('examiners')
+                        ->whereId($examiners)->first();
+
+        $examiner_id = (array) $getExaminerId;
+        return Redirect::to('examiner/'.$examiner_id['examiner_id']);
     }
 }
