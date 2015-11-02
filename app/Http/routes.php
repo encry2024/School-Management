@@ -20,7 +20,8 @@ get('/', ['as' => '/', 'uses' => 'HomeController@index']);
 // Student Route
 Route::bind('student',    function ($id) { return App\Student::whereId($id)->first(); });
 Route::resource('student', 'StudentController');
-get('student/exam', ['as' => 'stud_exam', 'uses' => 'StudentController@examForm']);
+
+get('examiner/{eid}', ['as' => 'stud_exam', 'uses' => 'StudentController@entranceExamForm']);
 post('submit_exam', ['as' => 'submit_exam', 'uses' => 'StudentController@submitExam']);
 
 
