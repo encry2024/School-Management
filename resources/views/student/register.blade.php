@@ -68,9 +68,9 @@
                     </div>
 
                     <div class="three fields">
-                        <div class="field"><input type="text" name="mother" placeholder="Mother's Name"></div>
+                        <div class="field"><input type="text" name="mother_name" placeholder="Mother's Name"></div>
                         <div class="field"><input type="text" name="mother_num" placeholder="Contact Number"></div>
-                        <div class="field"><input type="text" name="mother_prof" placeholder="Occupation"></div>
+                        <div class="field"><input type="text" name="mother_occ" placeholder="Occupation"></div>
                     </div>
 
                     <div class="field">
@@ -80,7 +80,7 @@
                     <div class="three fields">
                         <div class="field"><input type="text" name="father_name" placeholder="Father's Name"></div>
                         <div class="field"><input type="text" name="father_num" placeholder="Contact Number"></div>
-                        <div class="field"><input type="text" name="father_prof" placeholder="Occupation"></div>
+                        <div class="field"><input type="text" name="father_occ" placeholder="Occupation"></div>
                     </div>
 
                     <div class="field">
@@ -88,9 +88,9 @@
                     </div>
 
                     <div class="ui fluid buttons">
-                        <button class="ui positive button" type="submit">NEXT</button>
-                        <div class="or"></div>
                         <button class="ui negative button">CANCEL</button>
+                        <div class="or"></div>
+                        <button class="ui positive button" type="submit">NEXT</button>
                     </div>
                </form>
             </div>
@@ -148,11 +148,11 @@
                         },
                         {
                             type   : 'minLength[9]',
-                            prompt : 'Make sure you have entered [9-11] digit of your contact number'
+                            prompt : 'Make sure you have entered [7-11] digit of your contact number.'
                         },
                         {
                             type   : 'maxLength[11]',
-                            promtp : 'Make sure you have entered [9-11] digit of your contact number'
+                            promtp : 'Make sure you have entered [7-11] digit of your contact number'
                         }
                     ]
                 },
@@ -183,8 +183,8 @@
                         }
                     ]
                 },
-                mother: {
-                    identifier: 'mother',
+                mother_name: {
+                    identifier: 'mother_name',
                     rules: [
                         {
                             type   : 'empty',
@@ -204,21 +204,12 @@
                             prompt : 'You have provided an incorrect contact number of your Father'
                         },
                         {
-                            type   : 'minLength[9]',
-                            prompt : 'Make sure you entered [9-11] digit of your Father\'s contact number'
+                            type   : 'minLength[7]',
+                            prompt : 'Make sure you entered [7-11] digit of your Father\'s contact number'
                         },
                         {
                             type   : 'maxLength[11]',
-                            promtp : 'Make sure you entered [9-11] digit of your Father\'s contact number'
-                        }
-                    ]
-                },
-                mother_prof: {
-                    identifier: 'mother_prof',
-                    rules: [
-                        {
-                            type   : 'empty',
-                            prompt : 'Please provide your Father\'s occupation'
+                            promtp : 'Make sure you entered [7-11] digit of your Father\'s contact number'
                         }
                     ]
                 },
@@ -243,21 +234,12 @@
                             prompt : 'You have provided an incorrect contact number of your Father'
                         },
                         {
-                            type   : 'minLength[9]',
-                            prompt : 'Make sure you entered [9-11] digit of your Father\'s contact number'
+                            type   : 'minLength[7]',
+                            prompt : 'Make sure you entered [7-11] digit of your Father\'s contact number'
                         },
                         {
                             type   : 'maxLength[11]',
-                            promtp : 'Make sure you entered [9-11] digit of your Father\'s contact number'
-                        }
-                    ]
-                },
-                father_prof: {
-                    identifier: 'father_prof',
-                    rules: [
-                        {
-                            type   : 'empty',
-                            prompt : 'Please provide your Father\'s occupation'
+                            promtp : 'Make sure you entered [7-11] digit of your Father\'s contact number'
                         }
                     ]
                 },
