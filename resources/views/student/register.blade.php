@@ -7,7 +7,7 @@
 
 
 @section('content')
-<div class="ui center aligned container grid">
+<div class="ui centered container grid">
     <div class="ui eleven wide column">
         <div class="ui ordered steps">
             <div class="active step">
@@ -29,13 +29,13 @@
                 </div>
             </div>
         </div>
-        <div class="ui piled segments" style="margin-top: 1.5rem;">
+        <div class="ui stacked segments" style="margin-top: 1.5rem;">
             <div class="ui segment">
                 <h2 class="">Registration Form</h2>
             </div>
             <div class="ui segment blue">
                 <form class="ui form" action="{{ route('student.store') }}" method="POST">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input class="" type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="ui error message"></div>
 
                     <div class="ui horizontal divider">
@@ -43,10 +43,10 @@
                     </div>
 
                     <div class="field">
-                        <div class="field"><input type="text" placeholder="Firstname" name="fname"></div>
-                        <div class="field"><input type="text" placeholder="Middlename" name="mname"></div>
-                        <div class="field"><input type="text" placeholder="Lastname" name="lname"></div>
-                        <div class="field">
+                        <div class="required field"><label>First name</label><input type="text" placeholder="First name" name="fname"></div>
+                        <div class="required field"><label>Middle name</label><input type="text" placeholder="Middle name" name="mname"></div>
+                        <div class="required field"><label>Last name</label><input type="text" placeholder="Last name" name="lname"></div>
+                        <div class="required field"><label>Gender</label>
                             <div class="ui selection dropdown">
                                 <input type="hidden" name="gender">
                                 <i class="dropdown icon"></i>
@@ -58,9 +58,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="field"><input type="text" name="contact" placeholder="Contact Number"></div>
-                        <div class="field"><input type="text" name="p_address" placeholder="Address"></div>
-                        <div class="field"><input type="text" name="dob" placeholder="Date of Birth"></div>
+                        <div class="required field"><label>Contact Number (Home/Mobile)</label><input type="text" name="contact" placeholder="Contact Number"></div>
+                        <div class="required field"><label>Home Address</label><input type="text" name="p_address" placeholder="Address"></div>
+                        <div class="required field"><label>Date of Birth</label><input type="text" name="dob" placeholder="Date of Birth"></div>
                     </div>
 
                     <div class="ui horizontal divider">
@@ -68,9 +68,9 @@
                     </div>
 
                     <div class="three fields">
-                        <div class="field"><input type="text" name="mother_name" placeholder="Mother's Name"></div>
-                        <div class="field"><input type="text" name="mother_num" placeholder="Contact Number"></div>
-                        <div class="field"><input type="text" name="mother_occ" placeholder="Occupation"></div>
+                        <div class="required field"><label>Mother's name</label><input type="text" name="mother_name" placeholder="Mother's Name"></div>
+                        <div class="required field"><label>Contact (Home/Mobile/Work)</label><input type="text" name="mother_num" placeholder="Contact Number"></div>
+                        <div class="field"><label>Occupation</label><input type="text" name="mother_occ" placeholder="Occupation"></div>
                     </div>
 
                     <div class="field">
@@ -78,9 +78,9 @@
                     </div>
 
                     <div class="three fields">
-                        <div class="field"><input type="text" name="father_name" placeholder="Father's Name"></div>
-                        <div class="field"><input type="text" name="father_num" placeholder="Contact Number"></div>
-                        <div class="field"><input type="text" name="father_occ" placeholder="Occupation"></div>
+                        <div class="required field"><label>Father's name</label><input type="text" name="father_name" placeholder="Father's Name"></div>
+                        <div class="required field"><label>Contact (Home/Mobile/Work)</label><input type="text" name="father_num" placeholder="Contact Number"></div>
+                        <div class="field"><label>Occupation</label><input type="text" name="father_occ" placeholder="Occupation"></div>
                     </div>
 
                     <div class="field">
