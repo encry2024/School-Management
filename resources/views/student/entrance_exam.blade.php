@@ -8,9 +8,8 @@
 @stop
 
 
-
 @section('content')
-<div class="ui center aligned container grid">
+<div class="ui centered container grid">
     <div class="ui eleven wide column">
         <div class="ui ordered steps">
             <div class="completed step">
@@ -34,16 +33,17 @@
         </div>
     </div>
 
-    <div class="ui twelve wide column">
-        <div class="ui piled segments">
-            <div class="ui segment">
-                <label for="">{{ $examiner['fname'] }} {{ $examiner['mname'] }} {{ $examiner['lname'] }}</label>
+    <div class="ui fifteen wide column">
+        <div class="ui relaxed segments">
+            <div class="ui clearing segment left aligned">
+                Examiner's Name: <b style="margin-left: 1rem;">{{ $examiner['fname'] }} {{ $examiner['mname'] }} {{ $examiner['lname'] }}</b>
+                <label for="" style="margin-left: 35.55rem;">Date today: <b style="margin-left: 3.5rem;">{{ (new \DateTime())->format('F d, Y') }}</b></label>
                 <br>
-                <label for="">{{ $examiner['examiner_id'] }}</label>
+                Examiner's ID: <b style="margin-left: 2.5rem;">{{ $examiner['examiner_id'] }}</b>
+                <br>
             </div>
-
             <div class="ui segment">
-                
+
             </div>
         </div>
     </div>
