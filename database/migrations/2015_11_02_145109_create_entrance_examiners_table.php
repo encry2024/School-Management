@@ -14,7 +14,7 @@ class CreateEntranceExaminersTable extends Migration
     {
         Schema::create('examiners', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('student_id')->indexed();
+            $table->string('examiner_id')->indexed();
             $table->integer('status');
             $table->string('fname')->indexed();
             $table->string('mname')->indexed();
