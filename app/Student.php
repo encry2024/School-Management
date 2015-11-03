@@ -19,6 +19,10 @@ class Student extends Eloquent
     public $timestamps = true;
 
 
+    /**
+     * @param $eId
+     * @return examinerId
+     */
     public static function generateExaminerId($eId)
     {
         $length = 3;
