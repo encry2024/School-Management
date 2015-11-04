@@ -24,7 +24,7 @@
       Courses <i class="certificate icon"></i>
       </a>
 
-      <a style="font-size: 13px;" class="item">
+      <a style="font-size: 13px;" class="item" href="{{ route('exam.index') }}">
       Exams <i class="file text outline icon"></i>
       </a>
 
