@@ -35,7 +35,10 @@
          id="content">
 
         <div class="twelve wide column grid">
-            <div class="ui breadcrumb">
+            <div class="ui breadcrumb"
+                 style="
+                    font-size: 13px;
+                 ">
                 <a class="section" href="{{ url('/') }}">Dashboard</a>
                 <i class="right angle icon divider"></i>
                 <div class="active section">Exams</div>
