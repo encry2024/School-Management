@@ -7,10 +7,10 @@
 
 
 @section('content')
-    <div class="ui grid">
+    <div class="ui centered grid">
         <div class="three wide column">
             @include('util.user_menu')
-            <table class="ui basic table" style="margin-left: 2.55rem;">
+            <table class="ui basic table">
                 <thead>
                     <tr>
                         <th>Roles</th>
@@ -32,10 +32,9 @@
         </div>
 
         <div class="ten wide column"
-             style="margin-left: 2rem; margin-top: 0rem; border-radius: 0px; height: 100%; border: none; box-shadow: none;"
              id="content">
 
-            <div class="twelve wide column grid" style="margin-top: 0.5rem;">
+            <div class="twelve wide column grid">
                 <div class="ui breadcrumb" style="font-size: 13px;">
                     <a class="section" href="{{ url('/') }}">Dashboard</a>
                     <i class="right angle icon divider"></i>

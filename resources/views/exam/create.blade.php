@@ -17,12 +17,12 @@
                     <span class="date">Administrator</span>
                 </div>
             </div>
-            <div class="ui vertical menu" style="margin-left: -0.035rem; width: 17.673rem;">
+            <div class="ui vertical menu" style="margin-left: -0.045rem; width: 17.673rem;">
                 <div class="item">
                     <div class="ui dropdown group">
                         <input name="group" type="hidden">
                         <i class="archive icon"></i>
-                        <span class="text">Choose Group</span>
+                        <span class="text">Group it</span>
                         <div class="menu">
                             <div class="ui icon search input">
                                 <i class="search icon"></i>

@@ -1,4 +1,4 @@
-<div class="ui card" style="margin-left: 2.55rem;">
+<div class="ui card" >
     <div class="content">
         <a class="header">{{ Auth::user()->name }}</a>
         <div class="meta">
