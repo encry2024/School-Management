@@ -54,7 +54,7 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost') . ('homestead' == gethostname() ? null : ':8889'),
+            'host'      => env('DB_HOST', 'localhost') . ('homestead' == gethostname() ? null : env('DB_PORT')),
             'database'  => env('DB_DATABASE', 'himc'),
             'username'  => env('DB_USERNAME', 'root'),
             'password'  => env('DB_PASSWORD', 'root'),
@@ -66,7 +66,7 @@ return [
 
         'mysql2' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost') . ('homestead' == gethostname() ? null : ':8889'),
+            'host'      => env('DB_HOST', 'localhost') . ('homestead' == gethostname() ? null : env('DB_PORT')),
             'database'  => env('DB_DATABASE2', 'himc_examiners'),
             'username'  => env('DB_USERNAME', 'root'),
             'password'  => env('DB_PASSWORD', 'root'),
