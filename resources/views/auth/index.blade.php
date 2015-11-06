@@ -34,33 +34,20 @@
             <br>
 
             <div class="five wide column">
-                <div class="ui datepicker"></div>
+                <div class="ui calendar"></div>
             </div>
         </div>
 
         <br><br>
 
         <div class="ui grid">
-            <div class="eight wide column">
+            <div class="sixteen wide column">
                 <div class="ui segments">
-                    <div class="ui segment"><i class="flag icon"></i> Events</div>
+                    <div class="ui segment"><i class="flag icon"></i> Events Created</div>
                     <div class="ui segment red" style="font-size: 13px;">
                         <div class="ui negative message">
                             <div class="header" style="font-size: 13px;">
-                            There are no events created.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="eight wide column">
-                <div class="ui segments">
-                    <div class="ui segment"><i class="flag icon"></i> Today's Activities</div>
-                    <div class="ui segment red" style="font-size: 13px;">
-                        <div class="ui negative message">
-                            <div class="header" style="font-size: 13px;">
-                            No activities yet.
+                                No events yet.
                             </div>
                         </div>
                     </div>
@@ -70,6 +57,26 @@
         </div>
     </div>
     @include('util.sidebar')
+
+    <div class="ui small role modal">
+        <div class="header">Create Event</div>
+        <div class="content">
+            <form class="ui form">
+                <div class="field">
+                    <label>Event Name</label>
+                    <input type="text" name="event_name" placeholder="Event Name">
+                </div>
+                <div class="field">
+                    <label>Event Description</label>
+                    <input type="text" name="event_name" placeholder="Event Name">
+                </div>
+                <div class="field">
+                    <label>Event Date</label>
+                    <input type="text" name="event_name" id="event_date" placeholder="Event Name" readonly>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 @stop
 
@@ -78,10 +85,22 @@
 <script type="text/javascript">
     // Dropdown
     $(".ui.dropdown").dropdown();
-    // Date picker
-    $('.datepicker').pickadate({
-        clear: '',
-        close: ''
+    // Event picker
+    $(document).ready(function() {
+        $('.ui.calendar').fullCalendar({
+            selectable: true,
+            header: {
+                left: 'prev,next,today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            },
+            select: function( start, end, jsEvent, view ) {
+                /*console.log(jsEvent);*/
+                $(this).addClass('create_role');
+                $('.role.modal').modal('show');
+                document.getElementById("event_date").value = start.format('YYYY-MM-DD h:mm a') + ' - ' + end.format('YYYY-MM-DD h:mm a');
+            }
+        })
     });
 
     $('.ui.sticky').sticky({

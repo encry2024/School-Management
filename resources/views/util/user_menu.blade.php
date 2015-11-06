@@ -14,8 +14,6 @@
         <br>
         <a><i class="fork icon"></i>Role Requests</a>
         <br>
-        <a><i class="calendar icon"></i>Current Events</a>
-        <br>
         <a><i class="file text outline icon"></i>Exams On-going</a>
     </div>
 </div>
