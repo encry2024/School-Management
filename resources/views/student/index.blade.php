@@ -132,11 +132,7 @@
             </a>
 
             <a style="font-size: 13px;" class="item">
-                Professors <i class="spy icon"></i>
-            </a>
-
-            <a style="font-size: 13px;" class="item">
-                Courses <i class="certificate icon"></i>
+                Teachers <i class="spy icon"></i>
             </a>
 
             <a style="font-size: 13px;" class="item" href="{{ route('exam.index') }}">
