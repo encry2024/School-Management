@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="{{ URL::to('/') }}/semantic/dist/components/menu.css">
         <link rel="stylesheet" href="{{ URL::to('/') }}/semantic/dist/components/segment.css">
         <link rel="stylesheet" href="{{ URL::to('/') }}/date-picker/themes/default.date.css">
+        <link rel="stylesheet" href="{{ URL::to('/') }}/fullcalendar-2.4.0/fullcalendar.css">
         @yield('header')
     </head>
 
@@ -20,6 +21,8 @@
         <script src="{{ URL::to('/') }}/date-picker/picker.js"></script>
         <script src="{{ URL::to('/') }}/date-picker/picker.date.js"></script>
         <script src="{{ URL::to('/') }}/semantic/dist/components/modal.js"></script>
+        <script src="{{ URL::to('/') }}/fullcalendar-2.4.0/moment.js"></script>
+        <script src="{{ URL::to('/') }}/fullcalendar-2.4.0/fullcalendar.min.js"></script>
         
 
         @yield('content')
